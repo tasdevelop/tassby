@@ -44,7 +44,7 @@
 
 
 
-    <AutoCompleteTextView
+    <EditText
         android:layout_width="fill_parent"
         android:paddingLeft="10dp"
         android:gravity="center"

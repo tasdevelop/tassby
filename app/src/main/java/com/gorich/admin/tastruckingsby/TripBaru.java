@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 
@@ -26,7 +27,7 @@ public class TripBaru extends AppCompatActivity {
 
     protected TextView mTgl;
     protected AutoCompleteTextView mEMKL;
-    protected AutoCompleteTextView mTujuanTarif;
+    protected EditText mTujuanTarif;
     protected AutoCompleteTextView mNoPol;
     protected AutoCompleteTextView mDari;
     protected AutoCompleteTextView mSampai;
@@ -67,7 +68,7 @@ public class TripBaru extends AppCompatActivity {
 
         mTgl = (TextView) findViewById((R.id.txtTanggal));
         mEMKL = (AutoCompleteTextView) findViewById((R.id.spinnerEMKL));
-        mTujuanTarif = (AutoCompleteTextView) findViewById((R.id.spinnerTujuanTarif));
+        mTujuanTarif = (EditText) findViewById((R.id.spinnerTujuanTarif));
         mNoPol = (AutoCompleteTextView) findViewById((R.id.spinnerNoPol));
         mDari = (AutoCompleteTextView) findViewById((R.id.spinnerDari));
         mShipper = (AutoCompleteTextView) findViewById((R.id.spinnershipper));
@@ -123,6 +124,7 @@ public class TripBaru extends AppCompatActivity {
 
         }
         //endregion
+
         //region BIND COMBO JENIS ORDERAN
         try {
             rslt = "START";
@@ -156,43 +158,51 @@ public class TripBaru extends AppCompatActivity {
         }
         //endregion
         //region BIND COMBO TUJUAN TARIF
-        try {
-            rslt = "START";
-            Caller c = new Caller();
-            c.sCommand = "getcombotujuantarif";
-            c.join();
-            c.start();
-            while (rslt == "START") {
-                try {
-                    Thread.sleep(10);
-
-                } catch (Exception ex) {
-
+        mTujuanTarif.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean hasFocus) {
+                if (hasFocus) {
+                    startActivity(new Intent(TripBaru.this,ListTujuan.class));
                 }
             }
-
-            tujuantariflist = gson.fromJson(rslt,   String[].class);
-            mTujuanTarif.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, tujuantariflist) {
-                @Override
-                public View getView(int position, View convertView, ViewGroup parent) {
-                    TextView textView = (TextView) super.getView(position, convertView, parent);
-
-                    View view = super.getView(position, convertView, parent);
-                    TextView text = (TextView) view.findViewById(android.R.id.text1);
-                    text.setTextColor(Color.BLACK);
-                    return view;
-                }
-            });
-            mTujuanTarif.setOnTouchListener(new View.OnTouchListener(){
-                @Override
-                public boolean onTouch(View v, MotionEvent event){
-                    mTujuanTarif.showDropDown();
-                    return false;
-                }
-            });
-        } catch (Exception ex) {
-
-        }
+        });
+//        try {
+//            rslt = "START";
+//            Caller c = new Caller();
+//            c.sCommand = "getcombotujuantarif";
+//            c.join();
+//            c.start();
+//            while (rslt == "START") {
+//                try {
+//                    Thread.sleep(10);
+//
+//                } catch (Exception ex) {
+//
+//                }
+//            }
+//
+//            tujuantariflist = gson.fromJson(rslt,   String[].class);
+//            mTujuanTarif.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, tujuantariflist) {
+//                @Override
+//                public View getView(int position, View convertView, ViewGroup parent) {
+//                    TextView textView = (TextView) super.getView(position, convertView, parent);
+//
+//                    View view = super.getView(position, convertView, parent);
+//                    TextView text = (TextView) view.findViewById(android.R.id.text1);
+//                    text.setTextColor(Color.BLACK);
+//                    return view;
+//                }
+//            });
+//            mTujuanTarif.setOnTouchListener(new View.OnTouchListener(){
+//                @Override
+//                public boolean onTouch(View v, MotionEvent event){
+//                    mTujuanTarif.showDropDown();
+//                    return false;
+//                }
+//            });
+//        } catch (Exception ex) {
+//
+//        }
         //endregion
         //region BIND COMBO NO POLISI
         try {
