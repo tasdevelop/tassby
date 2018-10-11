@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_detail_trip"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.gorich.admin.tastruckingsby.DetailTrip">
+
+    <TextView
+        android:text="DETAIL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:id="@+id/lblTanggal" />
+    <TextView
+        android:text="TRP01010101"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:id="@+id/txtTanggal"
+        android:layout_above="@+id/spinnerEMKL"
+        android:layout_alignLeft="@+id/spinnerEMKL"
+        android:layout_alignStart="@+id/spinnerEMKL"
+        android:layout_alignTop="@id/lblTanggal"
+        android:gravity="right"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="EMKL"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:id="@+id/lblEMKL"
+        android:layout_below="@+id/lblTanggal"
+        android:layout_alignLeft="@+id/lblTanggal"
+        android:layout_alignStart="@+id/lblTanggal" />
+    <TextView
+        android:text="TAS AP"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:id="@+id/spinnerEMKL"
+        android:layout_below="@+id/lblTanggal"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/textinputborder"
+        android:layout_alignLeft="@+id/spinnerTujuanTarif"
+        android:layout_alignStart="@+id/spinnerTujuanTarif"
+        android:height="30dp"
+        android:layout_above="@+id/lblTujuanTarif" />
+
+
+    <TextView
+        android:text="Banda Aceh"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:id="@+id/spinnerTujuanTarif"
+        android:layout_below="@+id/lblEMKL"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/textinputborder"
+        android:height="30dp"
+        android:layout_alignLeft="@+id/spinnerDari"
+        android:layout_alignStart="@+id/spinnerDari" />
+
+
+    <TextView
+        android:text="BK 12345"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:id="@+id/spinnerNoPol"
+        android:layout_below="@+id/lblTujuanTarif"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/textinputborder"
+        android:height="30dp"
+        android:layout_alignLeft="@+id/spinnerTujuanTarif"
+        android:layout_alignStart="@+id/spinnerTujuanTarif" />
+
+
+    <TextView
+        android:text="BELAWAN"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:id="@+id/spinnerDari"
+        android:layout_below="@+id/lblNoPol"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/textinputborder"
+        android:height="30dp"
+        android:layout_toRightOf="@+id/lblFE"
+        android:layout_toEndOf="@+id/lblFE" />
+
+
+    <TextView
+        android:text="BANDA ACEH"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:id="@+id/spinnerSampai"
+        android:layout_below="@+id/lblDari"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/textinputborder"
+        android:height="30dp"
+        android:layout_alignLeft="@+id/spinnerDari"
+        android:layout_alignStart="@+id/spinnerDari" />
+
+
+    <TextView
+        android:text="1"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:id="@+id/spinnerNoChasis"
+        android:layout_below="@+id/lblSampai"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/textinputborder"
+        android:height="30dp"
+        android:layout_alignLeft="@+id/spinnerSampai"
+        android:layout_alignStart="@+id/spinnerSampai" />
+
+
+    <TextView
+        android:text="BONGKARAN"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:id="@+id/spinnerJenisOrder"
+        android:layout_below="@+id/lblNoChasis"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/textinputborder"
+        android:height="30dp"
+        android:layout_alignLeft="@+id/spinnerSampai"
+        android:layout_alignStart="@+id/spinnerSampai" />
+
+    <TextView
+        android:text="20 feet"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:id="@+id/spinnerCont"
+        android:layout_below="@+id/lblJenisOrderan"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/textinputborder"
+        android:height="30dp"
+        android:layout_alignLeft="@+id/spinnerSampai"
+        android:layout_alignStart="@+id/spinnerSampai" />
+
+
+    <Button
+        android:layout_height="50dp"
+        android:id="@+id/bt_cancel"
+        android:padding="16dp"
+        android:text="keluar"
+        android:drawableLeft="@android:drawable/ic_menu_close_clear_cancel"
+        android:textSize="14sp"
+        android:layout_alignRight="@+id/spinnerFE"
+        android:layout_alignEnd="@+id/spinnerFE"
+        android:layout_below="@+id/spinnerFE"
+        android:layout_width="150dp" />
+
+    <Button
+        android:layout_height="50dp"
+        android:id="@+id/bt_delete"
+        android:padding="16dp"
+        android:drawableLeft="@android:drawable/ic_menu_save"
+        android:textSize="14sp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/bt_cancel"
+        android:layout_alignParentBottom="true"
+        android:layout_alignTop="@+id/bt_cancel"
+        android:layout_width="150dp"
+        android:layout_toLeftOf="@+id/bt_cancel"
+        android:text="hapus trip" />
+
+    <TextView
+        android:text="FULL"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:id="@+id/spinnerFE"
+        android:gravity="center"
+        android:background="@drawable/textinputborder"
+        android:height="30dp"
+        android:layout_alignBaseline="@+id/lblFE"
+        android:layout_alignBottom="@+id/lblFE"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/lblFE"
+        android:layout_toEndOf="@+id/lblFE" />
+
+    <TextView
+        android:text="Tujuan"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:id="@+id/lblTujuanTarif"
+        android:layout_alignBottom="@+id/spinnerTujuanTarif"
+        android:layout_alignLeft="@+id/lblEMKL"
+        android:layout_alignStart="@+id/lblEMKL" />
+
+    <TextView
+        android:text="No Pol"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:id="@+id/lblNoPol"
+        android:layout_alignBottom="@+id/spinnerNoPol"
+        android:layout_alignLeft="@+id/lblTujuanTarif"
+        android:layout_alignStart="@+id/lblTujuanTarif" />
+
+    <TextView
+        android:text="Dari"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:id="@+id/lblDari"
+        android:layout_alignBottom="@+id/spinnerDari"
+        android:layout_alignLeft="@+id/lblNoPol"
+        android:layout_alignStart="@+id/lblNoPol" />
+
+    <TextView
+        android:text="Sampai"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:id="@+id/lblSampai"
+        android:layout_alignBottom="@+id/spinnerSampai"
+        android:layout_alignLeft="@+id/lblDari"
+        android:layout_alignStart="@+id/lblDari" />
+
+    <TextView
+        android:text="Chasis"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:id="@+id/lblNoChasis"
+        android:layout_alignBottom="@+id/spinnerNoChasis"
+        android:layout_alignRight="@+id/lblTujuanTarif"
+        android:layout_alignEnd="@+id/lblTujuanTarif" />
+
+    <TextView
+        android:text="Jns Ord"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:id="@+id/lblJenisOrderan"
+        android:layout_alignBottom="@+id/spinnerJenisOrder"
+        android:layout_alignLeft="@+id/lblCont"
+        android:layout_alignStart="@+id/lblCont" />
+
+    <TextView
+        android:text="Cont"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:id="@+id/lblCont"
+        android:layout_alignBottom="@+id/spinnerCont"
+        android:layout_alignLeft="@+id/lblFE"
+        android:layout_alignStart="@+id/lblFE" />
+
+    <TextView
+        android:text="Emp/Full "
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:id="@+id/lblFE"
+        android:layout_below="@+id/spinnerCont"
+        android:layout_alignLeft="@+id/lblSampai"
+        android:layout_alignStart="@+id/lblSampai" />
+</RelativeLayout>
+</ScrollView>

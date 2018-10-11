@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_trip_baru"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.gorich.admin.tastruckingsby.TripBaruGantung">
+        <TextView
+            android:text="ENTRY TRIP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginStart="11dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:id="@+id/lblTanggal" />
+        <TextView
+            android:text="15 Des 2016"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:id="@+id/txtTanggal"
+            android:layout_above="@+id/spinnerEMKL"
+            android:layout_alignLeft="@+id/spinnerEMKL"
+            android:layout_alignStart="@+id/spinnerEMKL"
+            android:layout_alignTop="@id/lblTanggal"
+            android:gravity="right"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+
+
+        <AutoCompleteTextView
+            android:layout_width="fill_parent"
+            android:paddingLeft="10dp"
+            android:gravity="center"
+            android:hint="@string/spinnerTujuanTarif"
+            android:background="@drawable/textinputborder"
+            android:id="@+id/spinnerTujuanTarif"
+            android:layout_below="@+id/lblEMKL"
+            android:layout_toEndOf="@+id/lblEMKL"
+            android:layout_height="25dp"
+            android:textSize="16sp"
+            android:textAlignment="textStart"
+            android:layout_alignLeft="@+id/spinnerEMKL"
+            android:layout_alignStart="@+id/spinnerEMKL" />
+
+
+        <AutoCompleteTextView
+            android:layout_width="fill_parent"
+            android:paddingLeft="10dp"
+            android:gravity="center"
+            android:hint="@string/spinnerNoPol"
+            android:background="@drawable/textinputborder"
+            android:id="@+id/spinnerNoPol"
+            android:layout_below="@+id/lblTujuanTarif"
+            android:layout_toEndOf="@+id/lblEMKL"
+            android:layout_height="25dp"
+            android:textSize="16sp"
+            android:textAlignment="textStart"
+            android:layout_alignLeft="@+id/spinnerTujuanTarif"
+            android:layout_alignStart="@+id/spinnerTujuanTarif" />
+
+        <AutoCompleteTextView
+            android:layout_width="fill_parent"
+            android:paddingLeft="10dp"
+            android:gravity="center"
+            android:hint="Pilih Supir"
+            android:background="@drawable/textinputborder"
+            android:id="@+id/spinnerSupir"
+            android:layout_below="@+id/spinnerNoPol"
+            android:layout_toEndOf="@+id/lblEMKL"
+            android:layout_height="25dp"
+            android:textSize="16sp"
+            android:textAlignment="textStart"
+            android:layout_alignLeft="@+id/spinnerTujuanTarif"
+            android:layout_alignStart="@+id/spinnerTujuanTarif" />
+
+
+        <AutoCompleteTextView
+            android:layout_width="fill_parent"
+            android:paddingLeft="10dp"
+            android:gravity="center"
+            android:hint="@string/spinnerDari"
+            android:background="@drawable/textinputborder"
+            android:id="@+id/spinnerDari"
+            android:layout_below="@+id/lblSupir"
+            android:layout_toEndOf="@+id/lblEMKL"
+            android:layout_height="25dp"
+            android:textSize="16sp"
+            android:textAlignment="textStart"
+            android:layout_alignLeft="@+id/spinnerNoPol"
+            android:layout_alignStart="@+id/spinnerNoPol"
+            android:editable="false"
+            tools:editable="false"
+            android:enabled="false" />
+
+
+        <AutoCompleteTextView
+            android:layout_width="fill_parent"
+            android:paddingLeft="10dp"
+            android:gravity="center"
+            android:hint="@string/spinnershipper"
+            android:background="@drawable/textinputborder"
+            android:id="@+id/spinnershipper"
+            android:layout_below="@+id/lblDari"
+            android:layout_toEndOf="@+id/lblEMKL"
+            android:layout_height="25dp"
+            android:textSize="16sp"
+            android:textAlignment="textStart"
+            android:layout_alignLeft="@+id/spinnerDari"
+            android:layout_alignStart="@+id/spinnerDari" />
+
+
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:id="@+id/spinnerJenisOrder"
+            style="@style/spinner_style"
+            android:layout_below="@+id/spinnershipper"
+            android:layout_alignLeft="@+id/spinnershipper"
+            android:layout_alignStart="@+id/spinnershipper"
+            android:layout_margin="0dp"
+            android:layout_height="30dp"
+            />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:id="@+id/spinnerCont"
+            style="@style/spinner_style"
+            android:layout_below="@+id/spinnerJenisOrder"
+            android:layout_alignLeft="@+id/spinnerJenisOrder"
+            android:layout_alignStart="@+id/spinnerJenisOrder"
+            android:layout_margin="0dp"
+            android:layout_height="30dp"
+            />
+
+
+
+        <EditText android:id="@+id/txtgudang"
+            android:layout_width="fill_parent"
+            android:background="@drawable/textinputborder"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:hint="Isi Nama Gudang"
+            android:layout_below="@+id/spinnerCont"
+            android:layout_toEndOf="@+id/lblEMKL"
+            android:textSize="16sp"
+            android:layout_height="25dp"
+            android:textAlignment="textStart"
+            android:layout_alignLeft="@+id/spinnerCont"
+            android:layout_alignStart="@+id/spinnerCont" />
+
+        <AutoCompleteTextView
+            android:layout_width="fill_parent"
+            android:paddingLeft="10dp"
+            android:gravity="center"
+            android:hint="@string/spinnerEMKL"
+            android:background="@drawable/textinputborder"
+            android:id="@+id/spinnerEMKL"
+            android:layout_below="@+id/lblTanggal"
+            android:textSize="16sp"
+            android:layout_height="25dp"
+            android:textAlignment="textStart"
+            android:layout_toRightOf="@+id/lblTanggal"
+            android:layout_toEndOf="@+id/lblTanggal" />
+
+        <TextView
+            android:text="Cont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:id="@+id/lblCont"
+            android:layout_above="@+id/txtgudang"
+            android:layout_alignLeft="@+id/lblJenisOrderan"
+            android:layout_alignStart="@+id/lblJenisOrderan" />
+
+
+        <TextView
+            android:text="Jns Ord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:id="@+id/lblJenisOrderan"
+            android:layout_above="@+id/spinnerCont"
+            android:layout_alignLeft="@+id/lblshipper"
+            android:layout_alignStart="@+id/lblshipper"
+            android:layout_toLeftOf="@+id/spinnerJenisOrder"
+            android:layout_toStartOf="@+id/spinnerJenisOrder" />
+
+
+
+        <TextView
+            android:text="EMKL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:id="@+id/lblEMKL"
+            android:layout_alignBottom="@+id/spinnerEMKL"
+            android:layout_alignLeft="@+id/lblTanggal"
+            android:layout_alignStart="@+id/lblTanggal" />
+
+        <TextView
+            android:text="Tujuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:id="@+id/lblTujuanTarif"
+            android:layout_alignBottom="@+id/spinnerTujuanTarif"
+            android:layout_alignLeft="@+id/lblEMKL"
+            android:layout_alignStart="@+id/lblEMKL" />
+
+        <TextView
+            android:text="No Pol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:id="@+id/lblNoPol"
+            android:layout_alignBottom="@+id/spinnerNoPol"
+            android:layout_alignLeft="@+id/lblTujuanTarif"
+            android:layout_alignStart="@+id/lblTujuanTarif" />
+
+        <TextView
+            android:text="Supir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:id="@+id/lblSupir"
+            android:layout_alignBottom="@+id/spinnerSupir"
+            android:layout_alignLeft="@+id/lblTujuanTarif"
+            android:layout_alignStart="@+id/lblTujuanTarif" />
+
+        <TextView
+            android:text="Dari"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:id="@+id/lblDari"
+            android:layout_alignBottom="@+id/spinnerDari"
+            android:layout_alignLeft="@+id/lblNoPol"
+            android:layout_alignStart="@+id/lblNoPol" />
+
+        <TextView
+            android:text="Shipper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:id="@+id/lblshipper"
+            android:layout_alignBottom="@+id/spinnershipper"
+            android:layout_alignLeft="@+id/lblDari"
+            android:layout_alignStart="@+id/lblDari" />
+
+
+
+        <Button
+            android:id="@+id/bt_save"
+            android:padding="16dp"
+            android:text="simpan"
+            android:drawableLeft="@android:drawable/ic_menu_save"
+            android:textSize="14sp"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/txtgudang"
+            android:layout_alignLeft="@+id/lblgudang"
+            android:layout_alignStart="@+id/lblgudang" />
+
+        <Button
+            android:id="@+id/bt_cancel"
+            android:padding="16dp"
+            android:text="keluar"
+            android:drawableLeft="@android:drawable/ic_menu_close_clear_cancel"
+            android:textSize="14sp"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/txtgudang"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:text="Gudang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:id="@+id/lblgudang"
+            android:textAlignment="viewStart"
+            android:layout_above="@+id/bt_save"
+            android:layout_alignLeft="@+id/lblCont"
+            android:layout_alignStart="@+id/lblCont" />
+    </RelativeLayout>
+</ScrollView>

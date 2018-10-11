@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TRP 0001/XII/2016"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        android:id="@+id/post_nobukti"
+        android:layout_alignParentTop="true" />
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TAS AP"
+        android:textStyle="bold"
+        android:id="@+id/post_emkl"
+        android:layout_marginRight="8dp"
+        android:layout_alignTop="@+id/post_nobukti"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MUATAN"
+        android:textStyle="bold"
+        android:id="@+id/post_jenisorderan"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/post_nobukti"
+        android:layout_alignLeft="@+id/post_nobukti"
+        android:layout_alignStart="@+id/post_nobukti"/>
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BANDA ACEH"
+        android:id="@+id/post_tujuantarif"
+        android:textStyle="bold"
+        android:layout_marginRight="8dp"
+        android:layout_alignTop="@+id/post_jenisorderan"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BK 2123 AS"
+        android:id="@+id/post_nopol"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/post_jenisorderan"
+        android:layout_alignLeft="@+id/post_jenisorderan"
+        android:layout_alignStart="@+id/post_jenisorderan"
+        android:textStyle="bold"
+        />
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ANTO"
+        android:id="@+id/post_supir"
+        android:layout_marginRight="8dp"
+        android:layout_alignTop="@+id/post_nopol"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BELAWAN"
+        android:textStyle="bold"
+        android:id="@+id/post_dari"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/post_nopol"
+        android:layout_alignLeft="@+id/post_nopol"
+        android:layout_alignStart="@+id/post_nopol"/>
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="JL. ACEH"
+        android:textStyle="bold"
+        android:id="@+id/post_sampai"
+        android:layout_marginRight="8dp"
+        android:layout_alignTop="@+id/post_dari"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20"
+        android:textStyle="bold"
+        android:id="@+id/post_ukucont"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/post_dari"
+        android:layout_alignLeft="@+id/post_dari"
+        android:layout_alignStart="@+id/post_dari"/>
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EMPTY"
+        android:id="@+id/post_statuscont"
+        android:layout_marginRight="8dp"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/post_ukucont"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SHIPPER"
+        android:textStyle="bold"
+        android:id="@+id/post_shipper"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/post_ukucont"
+        android:layout_alignLeft="@+id/post_ukucont"
+        android:layout_alignStart="@+id/post_ukucont"/>
+</RelativeLayout>

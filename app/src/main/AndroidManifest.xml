@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gorich.admin.tastruckingsby">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <service
+            android:name=".TASService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".MyBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".AbsensiBaru" />
+        <activity android:name=".AbsensiBaruEntry" />
+        <activity android:name=".DetailTrip" />
+        <activity android:name=".GantiPassword" />
+        <activity android:name=".ListAbsensi" />
+        <activity android:name=".ListAbsensiDetail" />
+        <activity android:name=".ListTrip" />
+        <activity android:name=".LupaPassword" />
+        <activity android:name=".MainMenu" />
+        <activity android:name=".MainMenuMandor" />
+        <activity android:name=".MainMenuNonMandor" />
+        <activity android:name=".TripBaru" />
+        <activity android:name=".TripBaruGantung" />
+        <activity android:name=".ListTripGantung" />
+        <activity android:name=".DetailTripGantung" />
+        <activity android:name=".ActivityTripBaruGantungSenin" />
+        <activity android:name=".ListTripGantungSenin" />
+        <activity android:name=".ListTujuan"></activity>
+    </application>
+
+</manifest>

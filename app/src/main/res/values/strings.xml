@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">TAS Trucking (SBY)</string>
+    <string name="edit_message">Nama Gudang</string>
+    <string name="user">Input User</string>
+    <string name="password">Input Password</string>
+    <string name="passwordlama">Input Password Lama</string>
+    <string name="passwordbaru">Input Password Baru</string>
+    <string name="spinnerEMKL">Pilih EMKL</string>
+    <string name="spinnerJenisOrder">Pilih Jenis Orderan</string>
+    <string name="spinnerTujuanTarif">Pilih Tujuan (Tarif)</string>
+    <string name="spinnerNoPol">Pilih No Pol</string>
+    <string name="spinnerDari">Pilih Dari</string>
+    <string name="spinnerSampai">Pilih Tujuan</string>
+    <string name="spinnerCont">Pilih Ukuran Cont</string>
+    <string name="spinnerFE">Pilih Full/Empty</string>
+    <string name="spinnerNoChasis">Pilih No Chasis</string>
+    <string name="spinnershipper">Pilih Shipper</string>
+</resources>
