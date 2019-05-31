@@ -95,17 +95,6 @@
         android:layout_height="25sp"
         android:textAlignment="center" />
 
-
-    <Spinner
-        android:layout_width="match_parent"
-        android:id="@+id/spinnersupir"
-        style="@style/spinner_style"
-        android:layout_height="30sp"
-        android:layout_below="@+id/txtsupir"
-        android:layout_toRightOf="@+id/lblNoPol"
-        android:layout_margin="0dp" />
-
-
     <TextView
         android:text="Status "
         android:layout_width="wrap_content"

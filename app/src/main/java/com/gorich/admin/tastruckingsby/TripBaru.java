@@ -162,7 +162,8 @@ public class TripBaru extends AppCompatActivity {
             @Override
             public void onFocusChange(View view, boolean hasFocus) {
                 if (hasFocus) {
-                    startActivity(new Intent(TripBaru.this,ListTujuan.class));
+//                    startActivity(new Intent(TripBaru.this,ListTujuan.class));
+                      Toast.makeText(TripBaru.this, "Get Focus", Toast.LENGTH_SHORT).show();
                 }
             }
         });
